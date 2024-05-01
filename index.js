@@ -89,7 +89,7 @@ app.post("/login", async (req, res) => {
 
         if (user && user.password === password) {
             // Authentication successful, redirect to main page
-            res.redirect("/main");
+            res.redirect(`/main?username=${user.name}`);
         } else {
             // Authentication failed, redirect back to login page
             res.redirect("/login");

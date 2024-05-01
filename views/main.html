@@ -417,28 +417,49 @@
             <div class="container">
                 <a class="navbar-brand fs-2 fw-bold" href="#" id="logo"><img src="/images/logoWhite.png" alt=""
                         height="70px" width="70px"></a>
-            </div>
-            <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item px-4">
-                        <a class="nav-link fw-semibold" href="">Home</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link fw-semibold" href="#res">Resources</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link fw-semibold" href="files/cheatsheet/cheatsheet.html">CheatSheet</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link fw-semibold" href="#about">About</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link fw-semibold" href="#ready">Testimonials</a>
-                    </li>
-                    <li class="nav-item px-4">
-                        <a class="nav-link fw-semibold" href="#faq">FAQ</a>
+                <div class="d-flex justify-content-end">
+                    <button type="button"
+                        class="btn btn-outline-info d-none d-md-block d-lg-none me-3 fw-bold">Register</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" style="margin-right: 5px" href="">Home</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#res">Resources</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="files/cheatsheet/cheatsheet.html">CheatSheet</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#about">About</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#ready">Testimonials</a>
+                        </li>
+                        <li class="nav-item px-4">
+                            <a class="nav-link fw-semibold" href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul style="margin-top: 15px; font-family: 'Arial', sans-serif; font-size: 18px; color: #ffffff;">
+                    <li class="nav-item px-4" style="list-style-type: none;">
+                        <span id="welcomeMessage" style="font-style: italic; font-weight: bold;">Welcome!</span>
                     </li>
                 </ul>
+                
+                <a href="/register" style="text-decoration: none;">
+                    <button type="button" class="btn btn-outline-danger btn-sm fw-bold d-none d-lg-block d-xl-block d-xxl-block" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;">
+                        Log out
+                    </button>
+                </a>
+                
+            </div>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -946,9 +967,6 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-
         document.addEventListener("DOMContentLoaded", function () {
             const accordionItems = document.querySelectorAll(".accordion-item");
 
@@ -995,6 +1013,21 @@
             popupContainer.style.display = 'none';
         }, 550 * 10); // 1.5s animation * 10 times
 
+    // Function to get URL query parameter by name
+    function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Get the username from the URL query parameter
+    const username = getQueryParam('username');
+
+    // Extract the first word of the username
+    const firstName = username.split(' ')[0];
+
+    // Display the welcome message with the first word of the username
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    welcomeMessage.innerText = `Welcome ${firstName}!`;
     </script>
 </body>
 
