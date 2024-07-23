@@ -53,9 +53,8 @@ app.post("/register", async (req, res) => {
 
         // Validate password strength (for example, length >= 6 characters)
         if (password.length < 6) {
-            // Password is weak, you can send a response or handle it as you prefer
-            return res.status(400).send("Password must be at least 6 characters long.");
-        }
+          return res.render('passwordPopup', { message: "Password must be at least 6 characters long." });
+      }
 
         const existingUser = await Registration.findOne({ email: email });
 
@@ -69,7 +68,6 @@ app.post("/register", async (req, res) => {
             res.redirect("/login");
         } else {
             console.log("User already exists!");
-
         }
     } catch (error) {
         console.log(error);
@@ -282,4 +280,9 @@ app.get("/notes/javascript", (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+});
+
+
+app.get("/cheatsheet", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "cheatsheet.html"));
 });
