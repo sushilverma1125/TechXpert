@@ -209,6 +209,9 @@ app.get("/videos/c", (req, res) => {
 app.get("/cheatsheet/c", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "cheat_c.html"));
 });
+app.get("/cheatsheet", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "cheatsheet.html"));
+});
 app.get("/notes/c", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "cNotes.html"));
 });
