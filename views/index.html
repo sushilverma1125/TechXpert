@@ -44,9 +44,10 @@
             /* Apply blur effect for glass-like appearance */
         }
 
-        .nav-link:hover{
+        .nav-link:hover {
             color: aqua;
         }
+
         .navbar-nav .nav-link {
             color: #ffffff;
         }
@@ -283,11 +284,11 @@
             color: black;
         }
 
-        .sliderHeader{
+        .sliderHeader {
             font-family: 'Playfair Display', serif;
         }
 
-        .sliderPara{
+        .sliderPara {
             font-family: "Nanum Myeongjo", serif;
         }
 
@@ -358,6 +359,21 @@
             /* border: 2px solid rgba(255, 255, 255, 0.5);
             box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.507); */
         }
+
+        .footer {
+            position: absolute;
+            left: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 1108px;
+            height: 40%;
+            border-radius: 168px 168px 0 0;
+            background: linear-gradient(to top, rgba(143, 143, 143, 0.196), rgba(141, 255, 137, 0.333));
+            /* Make sure you define this color in your CSS variables */
+            transform: translate(-50%);
+        }
     </style>
 
     <title>TechXpert</title>
@@ -404,8 +420,9 @@
                     </ul>
                 </div>
                 <a href="/register" style="text-decoration: none;"><button type="button"
-                        class="btn btn-outline-info fw-bold d-none d-lg-block d-xl-block d-xxl-block">Login / Register</button></a>
-                </div>
+                        class="btn btn-outline-info fw-bold d-none d-lg-block d-xl-block d-xxl-block">Login /
+                        Register</button></a>
+            </div>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -421,17 +438,22 @@
                             style="--bs-bg-opacity: .5;">
                             <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 10px;">Best Learning
                                 Platform</h1>
-                            <p class="sliderPara">Discover top resources for engineering students: quizzes, notes, videos, cheatsheets, and more, to excel in your studies!</p>
-                            <a href="/register"><button class="btn btn-primary fs-4 fw-bold sliderBtn" id="res">Get Started</button></a>
+                            <p class="sliderPara">Discover top resources for engineering students: quizzes, notes,
+                                videos, cheatsheets, and more, to excel in your studies!</p>
+                            <a href="/register"><button class="btn btn-primary fs-4 fw-bold sliderBtn" id="res">Get
+                                    Started</button></a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="/images/cover-2.jpg" class="d-block w-100 rounded" alt="cover 2">
                         <div class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
                             style="--bs-bg-opacity: .5;">
-                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 10px;">Learn with AI chatbot</h1>
-                            <p class="sliderPara">Resolve your doubts 24/7 with our TechXpert chatbot. Get instant solutions for all your queries. Try it now!</p>
-                            <a href="/register"><button class="btn btn-primary fs-4 fw-bold sliderBtn" id="res">Get Started</button></a>
+                            <h1 class="display-2 fw-bold w-75 sliderHeader" style="margin-top: 10px;">Learn with AI
+                                chatbot</h1>
+                            <p class="sliderPara">Resolve your doubts 24/7 with our TechXpert chatbot. Get instant
+                                solutions for all your queries. Try it now!</p>
+                            <a href="/register"><button class="btn btn-primary fs-4 fw-bold sliderBtn" id="res">Get
+                                    Started</button></a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -442,7 +464,8 @@
                                 Portal</h1>
                             <p class="sliderPara">Cultivating Knowledge, Inspiring Success, and Nurturing Lifelong
                                 Learning Journeys.</p>
-                            <a href="/register"><button class="btn btn-primary fs-4 fw-bold sliderBtn" id="res">Get Started</button></a>
+                            <a href="/register"><button class="btn btn-primary fs-4 fw-bold sliderBtn" id="res">Get
+                                    Started</button></a>
                         </div>
                     </div>
                 </div>
@@ -484,8 +507,8 @@
                             <div class="but-set-2">
                                 <a href="/cheatsheet/python"><button type="button" class="btn btn-outline-info"
                                         class="cor-buttons">Cheat Sheets</button></a>
-                                <a href="/notes/python"> <button type="button"
-                                        class="btn btn-outline-success" class="cor-buttons">Notes</button></a>
+                                <a href="/notes/python"> <button type="button" class="btn btn-outline-success"
+                                        class="cor-buttons">Notes</button></a>
                             </div>
                         </div>
                     </div>
@@ -904,7 +927,7 @@
 
     <!-- Footer Start -->
     <!-- Abhishek -->
-    <footer class="bg-dark p-5">
+    <footer class="footer bg-dark p-5">
         <div class="text-white text-center mt-5">
             <h1 class="fw-bold">TechXpert</h1>
             <p>Lovely Professional University, <br>Jalandhar - Delhi, Grand Trunk Rd,<br> Phagwara, Punjab</p>
